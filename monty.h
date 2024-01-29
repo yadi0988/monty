@@ -25,7 +25,6 @@ typedef struct stack_s
         struct stack_s *prev;
         struct stack_s *next;
 } stack_t;
-stack_t *top;
 stack_t *stack;
 
 /**
@@ -48,6 +47,6 @@ void (*get_func(char *op))(stack_t **stack, unsigned int line_no);
 void push(stack_t **stack, unsigned int line_number);
 void processor(char *file_name, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
-
+void free_dlist();
 
 #endif

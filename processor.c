@@ -51,4 +51,5 @@ void processor(char *file_name, unsigned int line_number)
   f_ptr(&stack, line_number);
   
   }
+  fclose(fp);
   }
