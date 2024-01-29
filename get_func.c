@@ -12,6 +12,7 @@ void (*get_func(char *op))(stack_t **stack, unsigned int line_no)
   instruction_t funcs[] = {
 			   {"push", push},
 			   {"pall", pall},
+			   {"pint", pint},
 			   {NULL, NULL}
   };
 
