@@ -1,5 +1,4 @@
 #include "monty.h"
-#include <stdio.h>
 
 /**
  * main - main function
@@ -17,7 +16,6 @@ int main(int argc, char *argv[])
     }
 
   processor(argv[1], 0);
-  free_dlist();
-  
+
   return (0);
 }
