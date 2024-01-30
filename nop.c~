@@ -1,0 +1,11 @@
+#include "monty.h"
+
+/**
+ * add - function does not do anything
+ * Return: void
+ **/
+
+void nop(stack_t **stack, unsigned int line_number)
+{
+  return;
+}
