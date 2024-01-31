@@ -24,6 +24,7 @@ void (*get_func(char *op))(stack_t **stack, unsigned int line_no)
 			   {"pchar", pchar},
 			   {"pstr", pstr},
 			   {"rotl", rotl},
+			   {"rotr", _rotr},
 			   {NULL, NULL}
   };
 
