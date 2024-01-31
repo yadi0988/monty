@@ -9,6 +9,10 @@
 
 void pchar(stack_t **stack, unsigned int line_number)
 {
+  if (stack == NULL)
+    {
+      return;
+    }
   if (*stack == NULL)
     {
       fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
@@ -21,7 +25,7 @@ void pchar(stack_t **stack, unsigned int line_number)
     }
   else
     {
-  fprintf(stderr, "L%d: can't pchar, value out of range", line_number);
-  exit(EXIT_FAILURE);
+      fprintf(stderr, "L%d: can't pchar, value out of range", line_number);
+      exit(EXIT_FAILURE);
     }
 }
