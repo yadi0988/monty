@@ -10,6 +10,8 @@
 void pint(stack_t **stack, unsigned int line_number)
 {
   stack_t *temp;
+  if (!stack)
+    return;
   temp = *stack;
 
   if (temp == NULL)
