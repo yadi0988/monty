@@ -26,6 +26,22 @@ void push(stack_t **stack, unsigned int line_number)
   new_node->prev = NULL;
   new_node->next = NULL;
 
+  if (!_strcmp(1))
+    {
+      if (top == NULL)
+	{
+	  top = new_node;
+	  queue = top;
+	}
+      else
+	{
+	  top->prev = new_node;
+	  new_node->next = top;
+	  top = new_node;
+	}
+      return;
+    }
+
   if (*stack == NULL)
     {
       (*stack) = new_node;

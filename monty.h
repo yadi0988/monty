@@ -9,6 +9,7 @@
 char *opcode;
 int value;
 char *line;
+char *mode;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -26,6 +27,7 @@ typedef struct stack_s
         struct stack_s *next;
 } stack_t;
 stack_t *stack;
+stack_t *queue;
 stack_t *top;
 
 /**
@@ -62,6 +64,7 @@ void pchar(stack_t **stack, unsigned int line_number);
 void pstr(stack_t **stack, unsigned int line_number);
 void rotl(stack_t **stack, __attribute__((unused))unsigned int line_number);
 void _rotr(stack_t **stack, unsigned int line_number);
+int _strcmp(int i);
 
 
 #endif

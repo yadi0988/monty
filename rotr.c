@@ -12,9 +12,9 @@ void _rotr(stack_t **stack, __attribute__((unused))unsigned int line_number)
   if (*stack == NULL || (*stack)->prev == NULL)
     return;
 
-  top->prev = *stack;
-  (*stack)->next = top;
-  top = top->next;
+  queue->prev = *stack;
+  (*stack)->next = queue;
+  queue = queue->next;
   *stack = (*stack)->next;
-  top->prev = NULL;
+  queue->prev = NULL;
 }

@@ -12,10 +12,10 @@ void rotl(stack_t **stack, __attribute__((unused))unsigned int line_number)
   if (*stack == NULL || (*stack)->prev == NULL)
     return;
 
-  top->prev = *stack;
-  (*stack)->next = top;
+  queue->prev = *stack;
+  (*stack)->next = queue;
   *stack = (*stack)->prev;
   (*stack)->next = NULL;
-  top = top->prev;
-  top->prev = NULL;
+  queue = queue->prev;
+  queue->prev = NULL;
 }
