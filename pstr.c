@@ -10,17 +10,14 @@
 void pstr(stack_t **stack, __attribute__((unused))unsigned int line_number)
 {
   stack_t *temp = *stack;
-  int _value = temp->n;
   if (*stack == NULL)
     {
       printf("\n");
       return;
     }
 
-  while (temp != NULL)
+  while (temp != NULL && temp->n >= 0 && temp->n <= 127 && temp->n != 0)
     {
-      if (!(_value < 0 && _value > 127) &&  !(_value == 0))
-	break;
       printf("%c", (char)temp->n);
       temp = temp->prev;
     }
