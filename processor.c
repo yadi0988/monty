@@ -99,5 +99,6 @@ void processor(char *file_name, unsigned int line_number)
 
   
   }
+  _free();
   fclose(fp);
   }
